@@ -1,0 +1,26 @@
+$main: #151515;
+
+@font-face {
+    font-family: 'myFont';
+    src: url(../fonts/Gotham-Light.otf) format("opentype");
+}
+
+body {
+    font-family: 'myFont', sans-serif;
+    background-color: $main;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.block{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 5px;
+    transition: transform 1s;
+}
+
+
