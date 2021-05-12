@@ -1,15 +1,15 @@
 {
-  "name": "HWGA",
+  "name": "my-webpack-configuration",
   "version": "1.0.0",
-  "description": "",
+  "description": "A webpack configuration that was built by following official Webpack documentation (11 May 2021).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["webpack"],
+  "author": "Dmytro Anikin <dmytro.anikin@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.0",
