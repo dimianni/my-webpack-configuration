@@ -4,7 +4,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // https://webpack.js.org/plugins/mini-css-extract-plugin/
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+// https://webpack.js.org/plugins/copy-webpack-plugin/
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -29,6 +32,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             // changing output directory to 'css' folder
             filename: 'css/[name].[contenthash].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: "inc/**",
+                    context: 'src/',
+                },
+                {
+                    from: "favicon.ico",
+                    context: 'src/',
+                }
+            ]
         })
     ],
     module: {
