@@ -59,7 +59,13 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 use: [
                     // This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        // needed this to have correct background images path
+                        options: {
+                            publicPath: '../',
+                        },
+                    },
                     // Reads CSS imports in JS files. Interprets @import and url() like import/require() and resolves them.
                     'css-loader',
                     // Adds autoprefixes
